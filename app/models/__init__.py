@@ -18,9 +18,4 @@ class Connector():
 
         cls.cur = cls.conn.cursor()
 
-    @classmethod
-    def close_commit(cls):
-
-        cls.conn.commit()
-        cls.cur.close()
-        cls.conn.close()
+   
