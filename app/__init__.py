@@ -1,5 +1,6 @@
 from flask import Flask
 from app import routes
+from app.models.kenzie_models import Series
 
 def create_app():
     app = Flask(__name__)
@@ -8,4 +9,9 @@ def create_app():
 
     routes.init_app(app)
 
+    Series.create_table()
+
+    
+
     return app
+

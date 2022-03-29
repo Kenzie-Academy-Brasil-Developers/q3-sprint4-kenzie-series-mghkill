@@ -32,6 +32,7 @@ def read_db_by_id(element_id):
     return jsonify(output), HTTPStatus.OK
 
 def create_serie_db():
+
     data = request.get_json()
 
     serie = Series(**data)
